@@ -38,5 +38,13 @@ public class Musicale extends Passione{
     public String toString() {
         return getTitolo();
     }
-
+    public static <T> void stampaPassione(T passione) {
+        System.out.println(passione.toString());
+    }
+    public static void main(String[] args) {
+        Musicale musicale = new Musicale("eminiem", 10, "fatAssWhiteMan");
+        stampaPassione("il artista e:" + '"' + musicale.nomeArtista + '"');
+        stampaPassione(musicale.numeroDiTrracce);
+        stampaPassione(musicale.titolo);
+    }
 }
